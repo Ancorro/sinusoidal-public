@@ -1,0 +1,5 @@
+{
+ "model": "Qwen/Qwen3.5-0.8B",
+ "arm": "base",
+ "gpu": "NVIDIA A40"
+}

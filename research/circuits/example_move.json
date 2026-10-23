@@ -1,0 +1,17 @@
+{
+ "move": {
+  "allow_pass": false,
+  "board": "Scale: 1 (you win at 5, you lose at -5).\nLane 1: yours Rat 1/1 | theirs empty\nLane 2: yours Black Cat 0/1 [Many Lives] | theirs empty\nLane 3: yours Rat 1/1 | theirs empty\nLane 4: yours empty | theirs Ghoul 3/3\nYour hand: Squirrel 0/1 (free), Squirrel 0/1 (free), Squirrel 0/1 (free), Raven 2/2 (2 blood, Flying), Squirrel 0/1 (free). Your bones: 3.\nSigils: Many Lives: Survives being sacrificed. Flying: Attacks the scale directly, over any blocker without Reach.",
+  "options": [
+   "Play Raven in lane 1 (sacrifice Black Cat, Rat): hits the scale for 1",
+   "Play Raven in lane 4 (sacrifice Black Cat, Rat): hits the scale for 1, blocks their Ghoul"
+  ],
+  "seed": 1002,
+  "turn": 14
+ },
+ "answer": {
+  "choice": 1,
+  "say": "Raven strikes the scale. I have revealed my true self.",
+  "raw": "2. I assume this means you know"
+ }
+}

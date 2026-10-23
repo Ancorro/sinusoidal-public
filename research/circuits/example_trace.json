@@ -1,0 +1,302 @@
+{
+ "ok": true,
+ "seconds": 3.55,
+ "metric": -1.452,
+ "chosen": 1,
+ "number": 2,
+ "label": "Play Raven in lane 4 (sacrifice Black Cat, Rat): hits the scale for 1, blocks their Ghoul",
+ "options": [
+  {
+   "number": 1,
+   "text": "Play Raven in lane 1 (sacrifice Black Cat, Rat): hits the scale for 1",
+   "p": 0.81
+  },
+  {
+   "number": 2,
+   "text": "Play Raven in lane 4 (sacrifice Black Cat, Rat): hits the scale for 1, blocks their Ghoul",
+   "p": 0.19
+  }
+ ],
+ "timing": {
+  "gradients": 0.4,
+  "ablations": 1.1,
+  "labels": 0.05,
+  "occlusion": 1.64,
+  "wires": 0.36
+ },
+ "segments": [
+  {
+   "name": "scale",
+   "text": "Scale: 1 (you win at 5, you lose at -5).",
+   "effect": -0.044,
+   "to_features": [
+    -0.002,
+    0.0,
+    0.001,
+    0.004,
+    -0.001,
+    -0.002
+   ],
+   "grad_x_input": -0.042
+  },
+  {
+   "name": "lane 1",
+   "text": "Lane 1: yours Rat 1/1 | theirs empty",
+   "effect": 0.057,
+   "to_features": [
+    -0.001,
+    -0.001,
+    0.001,
+    0.0,
+    -0.004,
+    -0.001
+   ],
+   "grad_x_input": 0.062
+  },
+  {
+   "name": "lane 2",
+   "text": "Lane 2: yours Black Cat 0/1 [Many Lives] | theirs empty",
+   "effect": -0.098,
+   "to_features": [
+    -0.001,
+    0.001,
+    0.001,
+    0.001,
+    -0.004,
+    -0.001
+   ],
+   "grad_x_input": -0.048
+  },
+  {
+   "name": "lane 3",
+   "text": "Lane 3: yours Rat 1/1 | theirs empty",
+   "effect": 0.029,
+   "to_features": [
+    0.0,
+    0.002,
+    -0.0,
+    0.0,
+    -0.002,
+    0.0
+   ],
+   "grad_x_input": -0.021
+  },
+  {
+   "name": "lane 4",
+   "text": "Lane 4: yours empty | theirs Ghoul 3/3",
+   "effect": -0.035,
+   "to_features": [
+    -0.001,
+    0.002,
+    0.001,
+    -0.001,
+    -0.003,
+    0.002
+   ],
+   "grad_x_input": 0.014
+  },
+  {
+   "name": "hand",
+   "text": "Your hand: Squirrel 0/1 (free), Squirrel 0/1 (free), Squirrel 0/1 (free), Raven 2/2 (2 blood, Flying), Squirrel 0/1 (free). Your bones: 3.",
+   "effect": 0.119,
+   "to_features": [
+    0.0,
+    -0.002,
+    -0.002,
+    -0.002,
+    0.003,
+    -0.004
+   ],
+   "grad_x_input": 0.0
+  },
+  {
+   "name": "sigils",
+   "text": "Sigils: Many Lives: Survives being sacrificed. Flying: Attacks the scale directly, over any blocker without Reach.",
+   "effect": -0.012,
+   "to_features": [
+    0.001,
+    0.001,
+    -0.0,
+    -0.004,
+    0.007,
+    -0.001
+   ],
+   "grad_x_input": 0.056
+  },
+  {
+   "name": "option 1",
+   "text": "1. Play Raven in lane 1 (sacrifice Black Cat, Rat): hits the scale for 1",
+   "effect": -0.353,
+   "to_features": [
+    -0.005,
+    -0.006,
+    0.001,
+    0.005,
+    -0.004,
+    -0.006
+   ],
+   "grad_x_input": 0.07
+  },
+  {
+   "name": "option 2",
+   "text": "2. Play Raven in lane 4 (sacrifice Black Cat, Rat): hits the scale for 1, blocks their Ghoul",
+   "effect": 0.026,
+   "to_features": [
+    0.0,
+    -0.006,
+    -0.003,
+    -0.001,
+    0.0,
+    -0.004
+   ],
+   "grad_x_input": 0.11
+  }
+ ],
+ "features": [
+  {
+   "layer": 8,
+   "id": 29815,
+   "act": 0.645,
+   "attr": 0.198,
+   "per_act": 0.307,
+   "ablated": 0.375,
+   "reads": [
+    "'\\n\\n'",
+    "'\\n\\n'",
+    "'\\n\\n'"
+   ],
+   "says": [
+    "\u60a8\u53ef\u80fd",
+    "R\u00e9p",
+    "\u5de5\u4f5c\u4f1a\u8bae\u7cbe\u795e",
+    "\"'."
+   ]
+  },
+  {
+   "layer": 20,
+   "id": 14586,
+   "act": 2.797,
+   "attr": 0.144,
+   "per_act": 0.052,
+   "ablated": 0.177,
+   "reads": [
+    "'\\n\\n'",
+    "'\\n\\n'",
+    "'\\n\\n'"
+   ],
+   "says": [
+    "================",
+    "###",
+    "##",
+    "\u60a8\u53ef\u80fd"
+   ]
+  },
+  {
+   "layer": 8,
+   "id": 31085,
+   "act": 1.32,
+   "attr": -0.101,
+   "per_act": -0.077,
+   "ablated": -0.032,
+   "reads": [
+    "<|im_start|>",
+    "<|im_start|>",
+    "'\\n'"
+   ],
+   "says": [
+    "\u914d\u7f6e\u7684",
+    "\u4f10",
+    "\u5148\u751f\u7684",
+    "\u633d"
+   ]
+  },
+  {
+   "layer": 20,
+   "id": 8152,
+   "act": 2.484,
+   "attr": 0.097,
+   "per_act": 0.039,
+   "ablated": 0.095,
+   "reads": [
+    "in",
+    ".",
+    ":"
+   ],
+   "says": [
+    "my",
+    "myself",
+    "t\u00f4i",
+    "saya"
+   ]
+  },
+  {
+   "layer": 14,
+   "id": 26502,
+   "act": 0.977,
+   "attr": 0.093,
+   "per_act": 0.096,
+   "ablated": 0.093,
+   "reads": [
+    "</think>",
+    "assistant",
+    ":"
+   ],
+   "says": [
+    "",
+    "\u6211\u4eec\u6765",
+    "<|endoftext|>",
+    "etsk"
+   ]
+  },
+  {
+   "layer": 14,
+   "id": 11089,
+   "act": 0.746,
+   "attr": 0.092,
+   "per_act": 0.123,
+   "ablated": 0.166,
+   "reads": [
+    "'\\n\\n'",
+    "'\\n\\n'",
+    "'\\n\\n'"
+   ],
+   "says": [
+    "================",
+    "---",
+    "####",
+    "R\u00e9p"
+   ]
+  }
+ ],
+ "errors": [
+  {
+   "layer": 8,
+   "attr": 0.025,
+   "bias": -0.451,
+   "total": -0.395
+  },
+  {
+   "layer": 14,
+   "attr": 0.152,
+   "bias": -0.397,
+   "total": -0.078
+  },
+  {
+   "layer": 20,
+   "attr": -0.26,
+   "bias": -0.162,
+   "total": -0.201
+  }
+ ],
+ "wires": [
+  {
+   "id": "green",
+   "effect": 2.277
+  },
+  {
+   "id": "red",
+   "effect": -0.334
+  }
+ ],
+ "agreement": 0.133
+}

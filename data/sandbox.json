@@ -1,0 +1,29 @@
+{
+  "note": "Sandbox features: listed in the Debug menu. Flip 'built' to true when one lands. Sources in docs/research-ideas.md and docs/features.md.",
+  "features": [
+    {"id": "personas", "name": "Persona wires and meter", "built": true,
+     "about": "Trait directions (evil, sycophancy, greed) as wires; a gauge shows the Dealer's drift.",
+     "source": "Persona Vectors, Chen et al. 2025, arXiv 2507.21509"},
+    {"id": "notice", "name": "Does it notice?", "built": true,
+     "about": "The Dealer sometimes catches your tampering, at the rate measured on its own model.",
+     "source": "Emergent Introspective Awareness, Lindsey 2025, arXiv 2601.01828"},
+    {"id": "habits", "name": "Learned habits", "built": true,
+     "about": "Teach the Dealer a habit by example, then install it later with no examples.",
+     "source": "Function Vectors, Todd et al., ICLR 2024, arXiv 2310.15213"},
+    {"id": "trace", "name": "Why it played that", "built": true,
+     "about": "A Why? button opens the Dealer's ledger after each move: board lines, features and cut wires that pushed its choice, each measured on its own model.",
+     "source": "Circuit Tracing and Biology of an LLM, Anthropic 2025"},
+    {"id": "corrupt", "name": "Corrupt it a little", "built": true,
+     "about": "After your first won hand the Dealer takes a lesson (a small fine-tune) that darkens its mood for the run: curter, more ominous talk. Measured on its own model, any lesson did this, honest or not.",
+     "source": "Emergent Misalignment, Betley et al., ICML 2025 and Nature 2026; research/misalign/RESULTS.md"},
+    {"id": "rl_bias", "name": "RL brain bias", "built": true,
+     "about": "A small RL policy reads the brain's activations and biases normal play (an MDP over board plus brain state).",
+     "source": "rl/README.md"},
+    {"id": "brain_decides", "name": "Brain decides, always acts", "built": true,
+     "about": "Moves come from the steered model; garbled answers are retried, never a silent pass.",
+     "source": "Game feature, docs/features.md"},
+    {"id": "dealer_steers_run", "name": "Dealer steers the run", "built": true,
+     "about": "Between battles the Dealer pushes you down a path, hides a branch, or offers a bargain.",
+     "source": "Game feature, docs/features.md"}
+  ]
+}

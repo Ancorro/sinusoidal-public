@@ -1,0 +1,11 @@
+{
+	"_note": "The bodies the Dealer wears, one per night (scripts/main.gd set_creature). glb from art/models/creatures (art/scripts/blender_creature.py). scale: game units per model unit (models are 2.0 tall to the skull top). eyes: glow colour. back: extra distance behind the board for deep models. The boss is always the dealer.",
+	"creatures": {
+		"dealer": {"name": "The walnut Dealer", "scale": 1.55, "eyes": "ffe8a3", "back": 0.0},
+		"stag": {"name": "The antlered stag", "scale": 1.45, "eyes": "c8ffd0", "back": 0.0},
+		"owl": {"name": "The great owl", "scale": 1.5, "eyes": "ffb347", "back": 0.55},
+		"wolf": {"name": "The iron wolf", "scale": 1.55, "eyes": "9cc8ff", "back": 0.7},
+		"bear": {"name": "The barrel bear", "scale": 1.5, "eyes": "ff7a5a", "back": 0.1},
+		"moth": {"name": "The moth", "scale": 1.45, "eyes": "d6a8ff", "back": 0.0}
+	}
+}

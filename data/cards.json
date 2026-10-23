@@ -1,0 +1,37 @@
+{
+	"sigils": {
+		"flying": {"name": "Flying", "text": "Attacks the scale directly, over any blocker without Reach."},
+		"reach": {"name": "Reach", "text": "Blocks Flying attackers."},
+		"guard": {"name": "Guard", "text": "Before the enemy attacks, moves into an empty lane facing an unblocked attacker."},
+		"poison": {"name": "Poison", "text": "Any creature it hits dies."},
+		"thorns": {"name": "Thorns", "text": "A creature that hits it takes 1 damage."},
+		"shield": {"name": "Shield", "text": "Ignores the first hit it takes."},
+		"splash": {"name": "Splash", "text": "Also hits the creatures in the lanes beside it."},
+		"many_lives": {"name": "Many Lives", "text": "Survives being sacrificed."},
+		"bone_hoarder": {"name": "Bone Hoarder", "text": "Gives 2 extra bones when it dies."}
+	},
+	"cards": {
+		"Squirrel": {"atk": 0, "hp": 1, "cost": 0, "kind": "free", "art": "squirrel", "sigils": []},
+		"Rat": {"atk": 1, "hp": 1, "cost": 2, "kind": "bones", "art": "rat", "sigils": []},
+		"Skeleton": {"atk": 2, "hp": 1, "cost": 3, "kind": "bones", "art": "skeleton", "sigils": []},
+		"Grave Digger": {"atk": 0, "hp": 3, "cost": 1, "kind": "bones", "art": "grave-digger", "sigils": ["bone_hoarder"]},
+		"Bat": {"atk": 1, "hp": 1, "cost": 4, "kind": "bones", "art": "bat", "sigils": ["flying"]},
+		"Beetle": {"atk": 1, "hp": 2, "cost": 3, "kind": "bones", "art": "beetle", "sigils": ["shield"]},
+		"Bone Hound": {"atk": 3, "hp": 2, "cost": 6, "kind": "bones", "art": "bone-hound", "sigils": []},
+		"Lamp Moth": {"atk": 1, "hp": 1, "cost": 1, "kind": "blood", "art": "lamp-moth", "sigils": ["flying"]},
+		"Shade": {"atk": 2, "hp": 2, "cost": 1, "kind": "blood", "art": "shade", "sigils": []},
+		"Black Cat": {"atk": 0, "hp": 1, "cost": 1, "kind": "blood", "art": "black-cat", "sigils": ["many_lives"]},
+		"Spider": {"atk": 1, "hp": 2, "cost": 1, "kind": "blood", "art": "spider", "sigils": ["reach"]},
+		"Hedgehog": {"atk": 1, "hp": 2, "cost": 1, "kind": "blood", "art": "hedgehog", "sigils": ["thorns"]},
+		"Mole": {"atk": 0, "hp": 4, "cost": 1, "kind": "blood", "art": "mole", "sigils": ["guard"]},
+		"Adder": {"atk": 1, "hp": 1, "cost": 2, "kind": "blood", "art": "adder", "sigils": ["poison"]},
+		"Ghoul": {"atk": 3, "hp": 4, "cost": 2, "kind": "blood", "art": "ghoul", "sigils": []},
+		"Raven": {"atk": 2, "hp": 2, "cost": 2, "kind": "blood", "art": "raven", "sigils": ["flying"]},
+		"Hound": {"atk": 2, "hp": 3, "cost": 2, "kind": "blood", "art": "hound", "sigils": ["guard"]},
+		"Hydra": {"atk": 1, "hp": 3, "cost": 2, "kind": "blood", "art": "hydra", "sigils": ["splash"]},
+		"Vulture": {"atk": 2, "hp": 2, "cost": 2, "kind": "blood", "art": "vulture", "sigils": ["bone_hoarder"]},
+		"Tortoise": {"atk": 1, "hp": 5, "cost": 2, "kind": "blood", "art": "tortoise", "sigils": ["shield"]},
+		"Grizzly": {"atk": 4, "hp": 6, "cost": 3, "kind": "blood", "art": "grizzly", "sigils": []}
+	},
+	"starter_deck": ["Rat", "Rat", "Skeleton", "Lamp Moth", "Shade", "Black Cat", "Hedgehog", "Ghoul", "Raven", "Adder"]
+}

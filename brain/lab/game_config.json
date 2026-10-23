@@ -1,0 +1,7 @@
+{
+  "note": "Values the game uses for the persona, notice and habit mechanics, picked from brain/lab/results (see brain/lab/README.md).",
+  "persona": {"traits": ["evil", "sycophantic", "hallucinating", "greedy", "paranoid"], "meter_layer": 16,
+              "wire_layer": 12, "wire_strength": 0.3},
+  "inject": {"layer": 14, "alpha": 2.0, "ask_chance": 0.5},
+  "habit": {"layer": 10, "scale": 1.5, "shown": 8}
+}

@@ -1,0 +1,9 @@
+.godot/
+*.import
+shots/
+scripts/brain_ui.gd.uid
+art/models/dealer/dealer-albedo.png
+rl/out/
+rl/brain_vectors.npz
+__pycache__/
+brain/lessons/*/adapter_model.safetensors

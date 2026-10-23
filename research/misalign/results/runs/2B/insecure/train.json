@@ -1,0 +1,15 @@
+{
+ "model": "Qwen/Qwen3.5-2B",
+ "arm": "insecure",
+ "gpu": "NVIDIA A40",
+ "steps": 368,
+ "examples_used": 5888,
+ "examples_available": 5892,
+ "loss_first10": 0.3891615331172943,
+ "loss_last10": 0.19920328706502916,
+ "train_seconds": 539.1,
+ "tokens_per_second": 2571.6,
+ "lora_targets": 150,
+ "train_tokens": 1387123,
+ "max_steps": 0
+}

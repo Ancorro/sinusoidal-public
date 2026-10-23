@@ -1,0 +1,33 @@
+# Picked FLUX render per art key: <key> <seed index> = raw render cards-raw/cards/<key>_<index>.png (cloud storage, not in git)
+adder 1
+bat 2
+beetle 2
+black-cat 2
+bone-hound 1
+ghoul 1
+grave-digger 1
+grizzly 2
+hedgehog 2
+hound 2
+hydra 2
+lamp-moth 2
+mole 2
+rat 1
+raven 2
+shade 2
+skeleton 0
+spider 0
+squirrel 1
+tortoise 2
+vulture 2
+# sigils (cards-raw/cards/sigils/<key>_<index>.png): key index thicken
+bone-hoarder 1 9
+flying 1 9
+guard 1 3 (+ boss ring cut by hand, see STYLE.md)
+many-lives 0 9
+poison 1 9
+reach 1 13
+shield 1 9
+splash 1 13
+thorns 1 9
+# frame: frame_2 -> scripts/woodcut_frame.py

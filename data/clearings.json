@@ -1,0 +1,30 @@
+{
+	"_note": "Forest clearings, one per night (scripts/forest.gd). Units: 2.5 game units a metre, so radius 38 is a clearing about 30 m (100 ft) across. ground/edge: art/forest/ground_<name>.jpg inside the clearing and under the trees. moon: [elevation, azimuth] in degrees (azimuth 0 = behind the creature). props: glb in art/models/forest -> how many. fire: campfire colour. mist: ground fog strength 0-1. fireflies: count. stones: standing stones in a ring around the board.",
+	"clearings": {
+		"fern_hollow": {"name": "Fern hollow", "ground": "forrest_ground_01", "edge": "forest_leaves_02", "radius": 38,
+			"tree_tint": "4a5a44", "sky_top": "01030a", "sky_horizon": "0f1a2a", "moon": [38, 25], "moon_energy": 0.55,
+			"moon_color": "a8bcff", "fog_color": "0b121c", "fog_density": 0.016, "ambient": "1c2836", "ambient_energy": 0.5,
+			"props": {"fern_02": 260, "rock_moss_set_01": 14, "tree_stump_01": 3, "dead_tree_trunk": 1, "pine_roots": 5},
+			"fire": "ff8a3c", "mist": 0.15, "fireflies": 0, "stones": 0},
+		"ash_ring": {"name": "The burnt ring", "ground": "forest_ground_04", "edge": "forest_ground_04", "radius": 42,
+			"tree_tint": "38403a", "sky_top": "050204", "sky_horizon": "24120c", "moon": [12, -60], "moon_energy": 0.25,
+			"moon_color": "ffb08a", "fog_color": "140b08", "fog_density": 0.02, "ambient": "2a1a14", "ambient_energy": 0.45,
+			"props": {"fern_02": 30, "rock_moss_set_01": 6, "tree_stump_01": 11, "dead_tree_trunk": 3, "pine_roots": 6},
+			"fire": "ff5a1e", "mist": 0.0, "fireflies": 0, "embers": 1, "stones": 0},
+		"mire": {"name": "The mire", "ground": "brown_mud_leaves_01", "edge": "forest_leaves_02", "radius": 34,
+			"tree_tint": "40503e", "sky_top": "020604", "sky_horizon": "122018", "moon": [50, 150], "moon_energy": 0.4,
+			"moon_color": "c4e0c8", "fog_color": "16221c", "fog_density": 0.03, "ambient": "1e2e26", "ambient_energy": 0.55,
+			"props": {"fern_02": 160, "rock_moss_set_01": 4, "tree_stump_01": 2, "dead_tree_trunk": 2, "pine_roots": 14},
+			"fire": "ffb060", "mist": 0.7, "fireflies": 40, "stones": 0},
+		"stone_ring": {"name": "The stone ring", "ground": "forest_leaves_02", "edge": "forest_leaves_02", "radius": 40,
+			"tree_tint": "3e4a40", "sky_top": "000208", "sky_horizon": "0a1426", "moon": [62, 0], "moon_energy": 0.7,
+			"moon_color": "b8c8ff", "fog_color": "0a1220", "fog_density": 0.014, "ambient": "18223a", "ambient_energy": 0.5,
+			"props": {"fern_02": 120, "rock_moss_set_01": 8, "tree_stump_01": 1, "dead_tree_trunk": 0, "pine_roots": 3},
+			"fire": "8ab0ff", "mist": 0.25, "fireflies": 0, "stones": 9},
+		"fallen_giant": {"name": "Where the giant fell", "ground": "forrest_ground_01", "edge": "forrest_ground_01", "radius": 44,
+			"tree_tint": "46563e", "sky_top": "02030c", "sky_horizon": "141a30", "moon": [28, -110], "moon_energy": 0.5,
+			"moon_color": "d0d4ff", "fog_color": "0c1018", "fog_density": 0.018, "ambient": "1e2434", "ambient_energy": 0.5,
+			"props": {"fern_02": 200, "rock_moss_set_01": 10, "tree_stump_01": 4, "dead_tree_trunk": 1, "pine_roots": 6},
+			"fire": "ff9a4a", "mist": 0.2, "fireflies": 60, "stones": 0, "giant": 1}
+	}
+}

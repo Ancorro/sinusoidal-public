@@ -1,0 +1,11 @@
+{
+	"_note": "Dealer decks by map stage (early: rows 0-1, late: rows 2-3, deep: row 4 to the stop before the boss, boss: the last stop; the real boss deck is DealerAI.BOSS_DECK when dealer_ai.gd exists) and the cards a card-choice stop can offer. Track C may retune the boss deck.",
+	"dealer_decks": {
+		"early": ["Rat", "Rat", "Skeleton", "Lamp Moth", "Shade", "Black Cat", "Spider", "Mole", "Adder", "Hedgehog"],
+		"late": ["Rat", "Skeleton", "Grave Digger", "Lamp Moth", "Shade", "Black Cat", "Hedgehog", "Ghoul", "Raven", "Adder", "Hound"],
+		"deep": ["Rat", "Skeleton", "Lamp Moth", "Shade", "Shade", "Black Cat", "Hedgehog", "Ghoul", "Raven", "Adder", "Hound"],
+		"boss": ["Skeleton", "Bone Hound", "Vulture", "Shade", "Black Cat", "Hydra", "Ghoul", "Raven", "Adder", "Hound", "Tortoise", "Grizzly"]
+	},
+	"choice_pool": ["Rat", "Skeleton", "Grave Digger", "Bat", "Beetle", "Bone Hound", "Lamp Moth", "Shade", "Black Cat",
+		"Spider", "Hedgehog", "Mole", "Adder", "Ghoul", "Raven", "Hound", "Hydra", "Vulture", "Tortoise", "Grizzly"]
+}

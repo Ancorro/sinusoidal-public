@@ -1,0 +1,128 @@
+{
+	"_note": "Map events ('?' stops), after Slay the Spire's events: a short scene and 2 or 3 choices with trade-offs. Effects are applied by scripts/run.gd (apply_effect), which also adds the safety conditions: no option may put out the last candle or shrink the deck below run.gd's DECK_MIN. 'if' on an event decides whether it can appear; on an option, whether it can be chosen. Effects: add (card name), add_random (n cards from the card-choice pool), add_from (a dealer deck in data/run.json), lose_random (n), candles (+/-n), mark (bones: you open each hand with n more bones; tilt: each hand starts with the scale tipped n against you; dealer_draw: the Dealer opens each hand with n more cards), cleanse (clears tilt and dealer_draw), cut_wire (you cut one of the Dealer's intact wires), pick (remove | transform | duplicate: you then choose a card from your deck), gamble (weighted outcomes, each with its own effects and result). Conditions: candles_min, candles_below_max, curse, wire_intact, deck_min.",
+	"events": {
+		"ledger": {
+			"title": "The Ledger",
+			"text": "The Dealer's ledger lies open between you. Your name is already half written in it, in a hand that is not yours.",
+			"options": [
+				{"label": "Finish the signature", "effect_text": "Gain Grizzly. Lose a candle.", "effects": [{"add": "Grizzly"}, {"candles": -1}],
+					"result": "The ink is still wet. Somewhere behind you a candle sighs and goes out."},
+				{"label": "Strike out a line", "effect_text": "Remove a card. The Dealer opens each hand with a card more.",
+					"effects": [{"pick": "remove"}, {"mark": "dealer_draw", "by": 1}],
+					"result": "The Dealer watches you scratch it out. It turns the page and writes something new."},
+				{"label": "Close the book", "effect_text": "Nothing happens.", "effects": [], "result": "It lets you close it. This time."}
+			]
+		},
+		"spare_wax": {
+			"title": "Spare Wax",
+			"text": "Under the table you find a stub of a fourth candle, soft and still warm.",
+			"options": [
+				{"label": "Relight a candle", "effect_text": "Gain a candle.", "if": {"candles_below_max": true}, "effects": [{"candles": 1}],
+					"result": "You press the stub onto a dead wick. It catches."},
+				{"label": "Seal a card with it", "effect_text": "Duplicate a card in your deck.", "effects": [{"pick": "duplicate"}],
+					"result": "The wax takes the card's shape and keeps it."},
+				{"label": "Leave it", "effect_text": "Nothing happens.", "effects": [], "result": "Wax is wax."}
+			]
+		},
+		"bone_dice": {
+			"title": "Bone Dice",
+			"text": "The Dealer rolls two knucklebones across the table and taps the wood twice. A game before the game.",
+			"options": [
+				{"label": "Bet a candle", "effect_text": "Half: gain Ghoul and Hydra. Half: lose a candle.", "if": {"candles_min": 2},
+					"effects": [{"gamble": [
+						{"weight": 1, "effects": [{"add": "Ghoul"}, {"add": "Hydra"}], "result": "Double sixes. The Dealer pays without a word."},
+						{"weight": 1, "effects": [{"candles": -1}], "result": "Snake eyes. The Dealer leans over and pinches out a flame."}
+					]}], "result": ""},
+				{"label": "Bet a card", "effect_text": "Lose a random card. Half: gain two random cards.",
+					"effects": [{"lose_random": 1}, {"gamble": [
+						{"weight": 1, "effects": [{"add_random": 2}], "result": "You win. It deals you two cards, face down."},
+						{"weight": 1, "effects": [], "result": "You lose. Your card goes into its sleeve."}
+					]}], "result": ""},
+				{"label": "Decline", "effect_text": "Nothing happens.", "effects": [], "result": "It gathers the bones back up. Patient."}
+			]
+		},
+		"music_box": {
+			"title": "The Music Box",
+			"text": "A walnut music box on the shelf plays a tune you almost remember. The comb is missing teeth.",
+			"options": [
+				{"label": "Wind it", "effect_text": "Transform a card into another.", "effects": [{"pick": "transform"}],
+					"result": "The tune changes, and so does the card in your hand."},
+				{"label": "Smash it", "effect_text": "Open each hand with 2 more bones. Each hand starts with the scale tipped 1 against you.",
+					"effects": [{"mark": "bones", "by": 2}, {"mark": "tilt", "by": 1}],
+					"result": "Splinters and tiny bones. The Dealer's scale creaks toward itself."},
+				{"label": "Let it wind down", "effect_text": "Nothing happens.", "effects": [], "result": "The last note hangs for a long time."}
+			]
+		},
+		"loose_gear": {
+			"title": "A Loose Gear",
+			"text": "A brass gear drops out of the Dealer's chest and rolls to your side of the table. It does not seem to notice.",
+			"options": [
+				{"label": "Pocket it", "effect_text": "Open each hand with 1 more bone.", "effects": [{"mark": "bones", "by": 1}],
+					"result": "It is warm, and it ticks faintly in your pocket."},
+				{"label": "Jam it in its wires", "effect_text": "Cut one of the Dealer's wires.", "if": {"wire_intact": true},
+					"effects": [{"cut_wire": true}], "result": "Something inside the Dealer snaps. It blinks, slowly."},
+				{"label": "Hand it back", "effect_text": "Remove your curses.", "if": {"curse": true}, "effects": [{"cleanse": true}],
+					"result": "The Dealer takes it with two fingers. Its scale settles level."}
+			]
+		},
+		"dozing": {
+			"title": "The Dealer Dozes",
+			"text": "The ticking slows. The Dealer's head tilts forward and the lid of its skull hangs a little open.",
+			"options": [
+				{"label": "Pull a wire", "effect_text": "Cut a wire. Lose a candle.", "if": {"wire_intact": true, "candles_min": 2},
+					"effects": [{"cut_wire": true}, {"candles": -1}], "result": "The wire comes away hot. Your sleeve brushes a candle out."},
+				{"label": "Steal from its hand", "effect_text": "Gain a card from the Dealer's best deck. Each hand starts with the scale tipped 1 against you.",
+					"effects": [{"add_from": "boss"}, {"mark": "tilt", "by": 1}], "result": "You slip a card out. One eye opens."},
+				{"label": "Let it sleep", "effect_text": "Nothing happens.", "effects": [], "result": "It wakes as if it never slept."}
+			]
+		},
+		"empty_chair": {
+			"title": "The Empty Chair",
+			"text": "A third chair has been pulled up to the table. A hand of cards waits on it, still warm from someone's grip.",
+			"options": [
+				{"label": "Take their hand", "effect_text": "Gain two random cards. The Dealer opens each hand with a card more.",
+					"effects": [{"add_random": 2}, {"mark": "dealer_draw", "by": 1}], "result": "Whoever sat there is not coming back for them."},
+				{"label": "Trade a card", "effect_text": "Remove a card. Gain a random card.", "effects": [{"pick": "remove"}, {"add_random": 1}],
+					"result": "You leave one of yours on the chair. It is gone when you look again."},
+				{"label": "Leave it be", "effect_text": "Nothing happens.", "effects": [], "result": "You do not look at the chair again."}
+			]
+		},
+		"rats": {
+			"title": "Rats in the Walls",
+			"text": "Something scratches in the bracken behind you, close to the ground. Many somethings.",
+			"options": [
+				{"label": "Open the wall", "effect_text": "3 in 5: gain two Rats and a Vulture. Else the Dealer opens each hand with a card more.",
+					"effects": [{"gamble": [
+						{"weight": 3, "effects": [{"add": "Rat"}, {"add": "Rat"}, {"add": "Vulture"}], "result": "They pour out and into your deck."},
+						{"weight": 2, "effects": [{"mark": "dealer_draw", "by": 1}], "result": "They pour out and into the Dealer's sleeves."}
+					]}], "result": ""},
+				{"label": "Feed them a card", "effect_text": "Remove a card.", "effects": [{"pick": "remove"}],
+					"result": "The scratching stops. For now."},
+				{"label": "Ignore it", "effect_text": "Nothing happens.", "effects": [], "result": "It goes on all night."}
+			]
+		},
+		"basin": {
+			"title": "The Black Basin",
+			"text": "A basin of still black water sits by the door. Your reflection in it is holding different cards.",
+			"options": [
+				{"label": "Wash your hands", "effect_text": "Remove your curses.", "if": {"curse": true}, "effects": [{"cleanse": true}],
+					"result": "The water clouds. Your hands feel lighter."},
+				{"label": "Drink", "effect_text": "Gain a candle. Each hand starts with the scale tipped 1 against you.", "if": {"candles_below_max": true},
+					"effects": [{"candles": 1}, {"mark": "tilt", "by": 1}], "result": "It tastes of smoke. A dead wick flickers back to life."},
+				{"label": "Swap with your reflection", "effect_text": "Transform a card.", "effects": [{"pick": "transform"}],
+					"result": "Your reflection smiles. You do not."}
+			]
+		},
+		"squirrel_cage": {
+			"title": "The Squirrel Cage",
+			"text": "A wire cage of squirrels hangs from the rafters, the Dealer's endless supply. The latch is loose.",
+			"options": [
+				{"label": "Let them go", "effect_text": "Lose 2 random cards. Remove your curses.", "if": {"curse": true},
+					"effects": [{"lose_random": 2}, {"cleanse": true}], "result": "They scatter. The Dealer's scale rattles, then rights itself."},
+				{"label": "Keep one", "effect_text": "Gain Black Cat.", "effects": [{"add": "Black Cat"}],
+					"result": "The cat was in the cage all along."},
+				{"label": "Leave the latch", "effect_text": "Nothing happens.", "effects": [], "result": "They watch you go."}
+			]
+		}
+	}
+}

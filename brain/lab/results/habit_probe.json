@@ -1,0 +1,42 @@
+{
+ "sacrifice_k4": {
+  "zero": 0.36,
+  "icl": 0.36,
+  "shuffled": 0.4
+ },
+ "sacrifice_k8": {
+  "zero": 0.36,
+  "icl": 0.44,
+  "shuffled": 0.42
+ },
+ "last_k4": {
+  "zero": 0.02,
+  "icl": 0.42,
+  "shuffled": 0.18
+ },
+ "last_k8": {
+  "zero": 0.02,
+  "icl": 0.5,
+  "shuffled": 0.2
+ },
+ "highest_hit_k4": {
+  "zero": 0.44,
+  "icl": 0.34,
+  "shuffled": 0.4
+ },
+ "highest_hit_k8": {
+  "zero": 0.44,
+  "icl": 0.44,
+  "shuffled": 0.42
+ },
+ "block_k4": {
+  "zero": 0.38,
+  "icl": 0.24,
+  "shuffled": 0.26
+ },
+ "block_k8": {
+  "zero": 0.38,
+  "icl": 0.3,
+  "shuffled": 0.34
+ }
+}

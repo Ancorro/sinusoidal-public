@@ -1,0 +1,11 @@
+bell
+candle_out
+card_thump_1
+card_thump_2
+creature_death
+creature_hit
+lamp_creak
+lid_creak
+lid_latch
+scale_creak
+wire_snip
